@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Windows",
+            "intelliSenseMode": "windows-msvc-x64",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "windowsSdkVersion": "10.0.22621.0",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${config:vsCasadiRoot}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ]
+        }
+    ],
+    "version": 4
+}

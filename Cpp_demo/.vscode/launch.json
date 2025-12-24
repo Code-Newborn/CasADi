@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run MSVC Debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Debug/casadi.exe",
+            "cwd": "${workspaceFolder}/Debug",
+            "preLaunchTask": "Build MSVC Debug",
+            "console": "integratedTerminal",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${config:vsSystem32};${config:vsCasadiBin}/Debug;${env:PATH}"
+                }
+            ]
+        },
+        {
+            "name": "Run MSVC Release",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Release/casadi.exe",
+            "cwd": "${workspaceFolder}/Release",
+            "preLaunchTask": "Build MSVC Release",
+            "console": "integratedTerminal",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${config:vsSystem32};${config:vsCasadiBin}/Release;${env:PATH}"
+                }
+            ]
+        }
+    ]
+}
