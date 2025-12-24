@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Configure MSVC Debug", // Debug 模式配置任务
-            "type": "process", // 使用 process 类型以避免 shell 特殊字符问题
-            "command": "cmake",
+            "label": "Configure MSVC Debug",
+            "type": "process",
+            "command": "D:/CMake/bin/cmake.exe",
             "args": [
                 "-S",
                 ".",
@@ -14,7 +14,7 @@
                 "Visual Studio 17 2022",
                 "-A",
                 "x64",
-                "-DvsCasadiRoot=${config:vsCasadiRoot}" // CasADi SDK 根目录
+                "-DvsCasadiRoot=${config:vsCasadiRoot}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -22,9 +22,9 @@
             "problemMatcher": []
         },
         {
-            "label": "Configure MSVC Release", // Release 模式配置任务
-            "type": "process", // 使用 process 类型以避免 shell 特殊字符问题
-            "command": "cmake",
+            "label": "Configure MSVC Release",
+            "type": "process",
+            "command": "D:/CMake/bin/cmake.exe",
             "args": [
                 "-S",
                 ".",
@@ -34,7 +34,7 @@
                 "Visual Studio 17 2022",
                 "-A",
                 "x64",
-                "-DvsCasadiRoot=${config:vsCasadiRoot}" // CasADi SDK 根目录
+                "-DvsCasadiRoot=${config:vsCasadiRoot}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -42,13 +42,19 @@
             "problemMatcher": []
         },
         {
-            "label": "Build MSVC Debug", // Debug 模式构建任务
-            "type": "shell", // 使用 shell 类型以支持环境变量设置
-            "command": "cmake --build build_msvc_debug --config Debug", // Debug 模式
+            "label": "Build MSVC Debug",
+            "type": "process",
+            "command": "D:/CMake/bin/cmake.exe",
+            "args": [
+                "--build",
+                "build_msvc_debug",
+                "--config",
+                "Debug"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
-                    "PATH": "${config:vsSystem32};${config:vsCasadiBin}/Debug;${env:PATH}"
+                    "PATH": "${config:vsCasadiBin}\\Debug;${env:PATH}"
                 }
             },
             "dependsOn": [
@@ -58,13 +64,19 @@
             "problemMatcher": []
         },
         {
-            "label": "Build MSVC Release", // Release 模式构建任务
-            "type": "shell", // 使用 shell 类型以支持环境变量设置
-            "command": "cmake --build build_msvc_release --config Release", // Release 模式
+            "label": "Build MSVC Release",
+            "type": "process",
+            "command": "D:/CMake/bin/cmake.exe",
+            "args": [
+                "--build",
+                "build_msvc_release",
+                "--config",
+                "Release"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
-                    "PATH": "${config:vsSystem32};${config:vsCasadiBin}/Release;${env:PATH}"
+                    "PATH": "${config:vsCasadiBin}\\Release;${env:PATH}"
                 }
             },
             "dependsOn": [
