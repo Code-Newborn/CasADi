@@ -14,7 +14,10 @@
                 "Visual Studio 17 2022",
                 "-A",
                 "x64",
-                "-DvsCasadiRoot=${config:vsCasadiRoot}"
+                "-DvsCasadiRoot=${config:vsCasadiRoot}",
+                "-DvsImguiRoot=${config:vsImguiRoot}",
+                "-DvsGlfwRoot=${config:vsGlfwRoot}",
+                "-DvsImplotRoot=${config:vsImplotRoot}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -34,7 +37,10 @@
                 "Visual Studio 17 2022",
                 "-A",
                 "x64",
-                "-DvsCasadiRoot=${config:vsCasadiRoot}"
+                "-DvsCasadiRoot=${config:vsCasadiRoot}",
+                "-DvsImguiRoot=${config:vsImguiRoot}",
+                "-DvsGlfwRoot=${config:vsGlfwRoot}",
+                "-DvsImplotRoot=${config:vsImplotRoot}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

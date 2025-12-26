@@ -12,7 +12,7 @@
             "environment": [
                 {
                     "name": "PATH",
-                    "value": "${config:vsSystem32};${config:vsCasadiBin}/Debug;${env:PATH}"
+                    "value": "${config:vsImguiBin};${config:vsGlfwBin};${config:vsImplotBin};${config:vsCasadiBin}/Debug;${config:vsSystem32};${env:PATH}"
                 }
             ]
         },
@@ -27,7 +27,7 @@
             "environment": [
                 {
                     "name": "PATH",
-                    "value": "${config:vsSystem32};${config:vsCasadiBin}/Release;${env:PATH}"
+                    "value": "${config:vsImguiBin};${config:vsGlfwBin};${config:vsImplotBin};${config:vsCasadiBin}/Release;${config:vsSystem32};${env:PATH}"
                 }
             ]
         }

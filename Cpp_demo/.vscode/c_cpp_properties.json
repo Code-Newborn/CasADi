@@ -9,7 +9,10 @@
             "windowsSdkVersion": "10.0.22621.0",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${config:vsCasadiRoot}/include"
+                "${config:vsCasadiRoot}/include",
+                "${config:vsImguiInclude}",
+                "${config:vsGlfwInclude}",
+                "${config:vsImplotInclude}"
             ],
             "defines": [
                 "_DEBUG",
