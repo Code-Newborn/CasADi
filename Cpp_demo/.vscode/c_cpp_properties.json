@@ -11,6 +11,7 @@
                 "${workspaceFolder}/**",
                 "${config:vsCasadiRoot}/include",
                 "${config:vsImguiInclude}",
+                "${config:vsImguiRoot}/backends",
                 "${config:vsGlfwInclude}",
                 "${config:vsImplotInclude}"
             ],
